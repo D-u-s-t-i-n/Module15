@@ -22,19 +22,16 @@ If we were to trust the data as is, then Lots1 and Lots2 beat the standard. Howe
 
 # Suspension Coil T-Test
 
-The p-value for our t-test is .06028. Which means we fail to reject our null hypothesis. What was our null hypothesis?
+The p-value for our t-test is .06028. Which means we fail to reject our null hypothesis. 
 
 Null hypothesis: mean = 1500
 Alternate hypothesis: mean does not equal 1500.
 
-Since our p-value is greater than .05, which is the most common signficance level, we lack the evidence to say the
-mean of our data is sigificantly different from 1500. Note: that the absence of proof is not the proof of the absence.
+Since our p-value is greater than .05, which is the most common signficance level, we lack the evidence to say the mean of our data is signficantly different from 1500. (The absence of proof is not the proof of the absence)
 
 # Design Your Own Study
 
-Cost of the vehicle and fuel efficiency are often big considerations for wanting to buy a vehicle. I am assuming most
-buyers would be interested in the performance and cost of their vehicle before they consider aesthetics such as its
-color or spoilers/fins.
+Cost of the vehicle and fuel efficiency are often big considerations for wanting to buy a vehicle. I am assuming most buyers would be interested in the performance and cost of their vehicle before they consider aesthetics such as its color or spoilers/fins.
 
 I would get more research data on cheaper materials, which generally increases the car weight. This will also affect the mpg. The challenge would be to maintain mpg at lower cost. A research question I would propose how much flexible room do we have with material quality used to manufacture the vehicle in relation to fuel efficiency (mpg). 
 
