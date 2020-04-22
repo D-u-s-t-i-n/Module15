@@ -1,0 +1,59 @@
+# MPG Regression
+# Load the data
+# getwd()
+#setwd("C:/R") #Need to make sure our data is in the working directory
+
+mCarDat <- read.csv("MechaCar_mpg.csv")
+head(mCarDat) # Look at top few lines of data set to get a "feel" for it
+
+## Response variable = MPG
+## Predictor variables = vehicle.length, vehicle.weight, spoiler.angle, ground.clearance
+## Categorical variable = AWD (Two different regression lines with the same slope)
+
+## Make model and generate coefficients of predictor and p-values
+
+model1 <- lm(mpg ~ vehicle.length + vehicle.weight + spoiler.angle + 
+             ground.clearance + AWD, data = mCarDat)
+
+summary(model1)
+
+## Predictors with p-value >.05 do not significantly contribute to the response (mpg).
+## vehicle.weight, spoiler.angle, and AWD are not significant predictors.
+
+# Suspension Coil Summary
+
+sCoilDat <- read.csv("Suspension_Coil.csv")
+
+## Get mean, median, variance, and standard deviation for ppi
+
+summary(sCoilDat$PSI)
+cat("Variance of PSI:  ", var(sCoilDat$PSI), "\n")
+cat("Standard Deviation: ", sqrt(var(sCoilDat$PSI)), "\n")
+
+## Filter data by lot type
+
+Lot1 <- subset(sCoilDat, Manufacturing_Lot == "Lot1")
+Lot2 <- subset(sCoilDat, Manufacturing_Lot == "Lot2")
+Lot3 <- subset(sCoilDat, Manufacturing_Lot == "Lot3")
+
+print("Manufacturing Lot 1 Summary Statistics")
+summary(Lot1$PSI)
+cat("Variance of PSI:  ", var(Lot1$PSI), "\n")
+cat("Standard Deviation: ", sqrt(var(Lot1$PSI)), "\n")
+
+print("Manufacturing Lot 2 Summary Statistics")
+summary(Lot2$PSI)
+cat("Variance of PSI:  ", var(Lot2$PSI), "\n")
+cat("Standard Deviation: ", sqrt(var(Lot2$PSI)), "\n")
+
+print("Manufacturing Lot 3 Summary Statistics")
+summary(Lot2$PSI)
+cat("Variance of PSI:  ", var(Lot3$PSI), "\n")
+cat("Standard Deviation: ", sqrt(var(Lot3$PSI)), "\n")
+
+# Suspension Coil T-Test
+## See if the suspension data has a mean that is signifantly different from a mean of 1500
+
+t.test(sCoilDat$PSI, mu = 1500)
+
+# Design Your Own Study (see MechaCarWriteUp.txt)
